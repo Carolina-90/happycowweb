@@ -5,16 +5,16 @@ import { closeModal } from "../actions";
 function Modal({ closeModal }) {
   return (
     <div>
-      <div className=" fixed top-0 left-0 w-full h-screen bg-gray-700 bg-opacity-50 items-center justify-around">
+      <div className=" fixed top-0 left-0 w-full h-screen bg-gray-700 bg-opacity-50 items-center justify-around z-30">
         <div
           style={{ top: "6rem", left: "50%" }}
-          className="grid grid-cols-2 gap-0 bg-white flex absolute bg-white rounded shadow-lg w-auto h-auto transform -translate-x-1/2"
+          className="grid grid-cols-1 xl:grid-cols-2 gap-0 bg-white flex absolute bg-white rounded shadow-lg w-3/6 xl:w-auto h-auto transform -translate-x-1/2"
         >
-          <div className="py-2 px-2">
+          <div className="py-2 px-2 flex-1 ">
             <h3 className="text-2xl text-gray-900 font-extrabold mb-2 ">
               Login to your account
             </h3>
-            <form className="flex flex-col">
+            <form className="flex col-span-2 xl:col-span-1 flex-col">
               <label className="mb-1 font-extrabold" for="username">
                 Username or Email
               </label>
@@ -59,7 +59,7 @@ function Modal({ closeModal }) {
               />
             </form>
           </div>
-          <div className="relative overflow-hidden">
+          <div className="hidden xl:flex xl:flex-1 relative overflow-hidden">
             <img
               src={require("../assets/login-social.jpg")}
               className="h-full w-full"

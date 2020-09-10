@@ -9,3 +9,13 @@ export const closeModal = () => {
     type: "CLOSE_MODAL",
   };
 };
+export const openSearchModal = () => {
+  return {
+    type: "OPEN_SEARCH_MODAL",
+  };
+};
+export const closeSearchModal = () => {
+  return {
+    type: "CLOSE_SEARCH_MODAL",
+  };
+};
